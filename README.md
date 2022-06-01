@@ -26,9 +26,12 @@ cd ../..
 ```
 
 quickly test the installation with
+
 ```
 make test
 ```
+
+then download a pretrained model from the tensorflow model zoo like [ssd_resnet50_v1_fpn_640x640_tpu-8](http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz)
 
 then configure the path to the dataset with the `DATASET_DIR` environment variable and run
 
