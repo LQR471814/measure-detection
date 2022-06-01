@@ -31,9 +31,23 @@ quickly test the installation with
 make test
 ```
 
-then download a pretrained model from the tensorflow model zoo like [ssd_resnet50_v1_fpn_640x640_tpu-8](http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz)
+then download a pretrained model from the tensorflow model zoo like [ssd_resnet50_v1_fpn_640x640_tpu-8](http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz), unzip the contents and copy it into the `pretrained` directory
 
-then configure the path to the dataset with the `DATASET_DIR` environment variable and run
+your directory structure should look like this
+
+```
+models/
+    ...
+pretrained/
+    ssd_resnet50_v1_fpn_640x640_tpu-8/
+        checkpoint/
+        saved_model/
+        pipeline.config
+...
+```
+
+
+after that, configure the path to the dataset with the `DATASET_DIR` environment variable and run
 
 ```
 make prepare-dataset
